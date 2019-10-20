@@ -1,0 +1,234 @@
+@prefix : <http://cor.esipfed.org/ont/earthcube/CMPR#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@base <http://cor.esipfed.org/ont/earthcube/CMPR> .
+
+<http://cor.esipfed.org/ont/earthcube/CMPR> rdf:type owl:Ontology ;
+                                             dc:title "Communication Protocols Controlled Vocabulary"@en ,
+                                                      "The Communications Protocols Controlled Vocabulary was created for NSF's EarthCube Program's Resource Repository.  At this point it merely lists the protocols used by these resources, with the eventual goal of enabling the more complete descriptions that would be required to improve interoperability between resources such as data sets and software tools."@en ;
+                                             <http://purl.org/dc/terms/bibliographicCitation> "Duerr, R., 2019, \"Communications Protocols Controlled Vocabulary\", ESIP Community Ontology Repository, Version 1.0.0, available at: http://cor.esipfed.org/ont/earthcube/CMPR"@en ;
+                                             <http://purl.org/dc/terms/license> <https://creativecommons.org/share-your-work/public-domain/cc0/> ,
+                                                                                "Ruth Duerr"@en ;
+                                             owl:versionInfo "1.0.0"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+<http://purl.obolibrary.org/obo/IAO_0000115> rdf:type owl:AnnotationProperty ;
+                                             rdfs:label "definition" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000119
+<http://purl.obolibrary.org/obo/IAO_0000119> rdf:type owl:AnnotationProperty ;
+                                             rdfs:label "definition source" .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#created_by
+oboInOwl:created_by rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#creation_date
+oboInOwl:creation_date rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasExactSynonym
+oboInOwl:hasExactSynonym rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym
+oboInOwl:hasRelatedSynonym rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://cor.esipfed.org/ont/earthcube/CMPR_0000001
+<http://cor.esipfed.org/ont/earthcube/CMPR_0000001> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://cor.esipfed.org/ont/earthcube/CMPR_0000010> ;
+                                                    <http://purl.obolibrary.org/obo/IAO_0000115> "An application-layer communications protocol used primarily to transfer data over the web."@en ;
+                                                    oboInOwl:created_by <http://orcid.org/0000-0003-4808-4736> ;
+                                                    oboInOwl:creation_date "2019-10-20T21:33:45Z"^^xsd:dateTime ;
+                                                    oboInOwl:hasExactSynonym "Hypertext Transfer Protocol"@en ;
+                                                    rdfs:label "HTTP"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://cor.esipfed.org/ont/earthcube/CMPR_0000001> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "An application-layer communications protocol used primarily to transfer data over the web."@en ;
+   <http://purl.org/dc/terms/bibliographicCitation> "Christensson, Per. \"HTTP Definition.\" TechTerms. (May 28, 2015). Accessed Oct 20, 2019. https://techterms.com/definition/http."
+ ] .
+
+
+###  http://cor.esipfed.org/ont/earthcube/CMPR_0000002
+<http://cor.esipfed.org/ont/earthcube/CMPR_0000002> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://cor.esipfed.org/ont/earthcube/CMPR_0000010> ;
+                                                    <http://purl.obolibrary.org/obo/IAO_0000115> "A variant of the standard web transfer protocol (HTTP) that adds a layer of security on the data in transit through a secure socket layer (SSL) or transport layer security (TLS) protocol connection"@en ;
+                                                    oboInOwl:created_by <http://orcid.org/0000-0003-4808-4736> ;
+                                                    oboInOwl:creation_date "2019-10-20T22:41:43Z"^^xsd:dateTime ;
+                                                    oboInOwl:hasExactSynonym "HyperText Transport Protocol Secure"@en ;
+                                                    rdfs:label "HTTPS"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://cor.esipfed.org/ont/earthcube/CMPR_0000002> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "A variant of the standard web transfer protocol (HTTP) that adds a layer of security on the data in transit through a secure socket layer (SSL) or transport layer security (TLS) protocol connection"@en ;
+   <http://purl.obolibrary.org/obo/IAO_0000119> <https://www.techopedia.com/definition/5361/hypertext-transport-protocol-secure-https>
+ ] .
+
+
+###  http://cor.esipfed.org/ont/earthcube/CMPR_0000003
+<http://cor.esipfed.org/ont/earthcube/CMPR_0000003> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://cor.esipfed.org/ont/earthcube/CMPR_0000010> ;
+                                                    <http://purl.obolibrary.org/obo/IAO_0000115> "Communication protocols that allow computers to communicate over long distance networks, the protocols underlying the Internet."@en ;
+                                                    oboInOwl:created_by <http://orcid.org/0000-0003-4808-4736> ;
+                                                    oboInOwl:creation_date "2019-10-20T22:46:08Z"^^xsd:dateTime ;
+                                                    oboInOwl:hasExactSynonym "Transmission Control Protocol/Internet Protocol"@en ;
+                                                    rdfs:label "TCP/IP"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://cor.esipfed.org/ont/earthcube/CMPR_0000003> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "Communication protocols that allow computers to communicate over long distance networks, the protocols underlying the Internet."@en ;
+   <http://purl.org/dc/terms/bibliographicCitation> "Christensson, Per. \"TCP/IP Definition.\" TechTerms. (2006). Accessed Oct 20, 2019. https://techterms.com/definition/tcpip."
+ ] .
+
+
+###  http://cor.esipfed.org/ont/earthcube/CMPR_0000004
+<http://cor.esipfed.org/ont/earthcube/CMPR_0000004> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://cor.esipfed.org/ont/earthcube/CMPR_0000010> ;
+                                                    <http://purl.obolibrary.org/obo/IAO_0000115> "A communications protocol designed for transferring files over the Internet."@en ;
+                                                    oboInOwl:created_by <http://orcid.org/0000-0003-4808-4736> ;
+                                                    oboInOwl:creation_date "2019-10-20T22:51:10Z"^^xsd:dateTime ;
+                                                    oboInOwl:hasExactSynonym "File Transfer Protocol"@en ;
+                                                    rdfs:label "FTP"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://cor.esipfed.org/ont/earthcube/CMPR_0000004> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "A communications protocol designed for transferring files over the Internet."@en ;
+   <http://purl.obolibrary.org/obo/IAO_0000119> "Christensson, Per. \"FTP Definition.\" TechTerms. (January 30, 2015). Accessed Oct 20, 2019. https://techterms.com/definition/ftp."
+ ] .
+
+
+###  http://cor.esipfed.org/ont/earthcube/CMPR_0000005
+<http://cor.esipfed.org/ont/earthcube/CMPR_0000005> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://cor.esipfed.org/ont/earthcube/CMPR_0000010> ;
+                                                    <http://purl.obolibrary.org/obo/IAO_0000115> "A secure communications protocol for communicating with another computer using normal UNIX shell commands."@en ;
+                                                    oboInOwl:created_by <http://orcid.org/0000-0003-4808-4736> ;
+                                                    oboInOwl:creation_date "2019-10-20T22:53:03Z"^^xsd:dateTime ;
+                                                    oboInOwl:hasExactSynonym "Secure Shell"@en ;
+                                                    rdfs:label "SSH"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://cor.esipfed.org/ont/earthcube/CMPR_0000005> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "A secure communications protocol for communicating with another computer using normal UNIX shell commands."@en ;
+   <http://purl.obolibrary.org/obo/IAO_0000119> "Christensson, Per. \"SSH Definition.\" TechTerms. (October 25, 2006). Accessed Oct 20, 2019. https://techterms.com/definition/ssh."
+ ] .
+
+
+###  http://cor.esipfed.org/ont/earthcube/CMPR_0000006
+<http://cor.esipfed.org/ont/earthcube/CMPR_0000006> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://cor.esipfed.org/ont/earthcube/CMPR_0000010> ;
+                                                    <http://purl.obolibrary.org/obo/IAO_0000115> "A secure file transfer protocol, which helps in transferring computer files securely from a local host to a remote host, using SSH."@en ;
+                                                    oboInOwl:created_by <http://orcid.org/0000-0003-4808-4736> ;
+                                                    oboInOwl:creation_date "2019-10-20T22:56:27Z"^^xsd:dateTime ;
+                                                    oboInOwl:hasExactSynonym "secure copy"@en ;
+                                                    rdfs:label "SCP"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://cor.esipfed.org/ont/earthcube/CMPR_0000006> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "A secure file transfer protocol, which helps in transferring computer files securely from a local host to a remote host, using SSH."@en ;
+   <http://purl.obolibrary.org/obo/IAO_0000119> <https://www.techopedia.com/definition/26142/secure-copy>
+ ] .
+
+
+###  http://cor.esipfed.org/ont/earthcube/CMPR_0000007
+<http://cor.esipfed.org/ont/earthcube/CMPR_0000007> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://cor.esipfed.org/ont/earthcube/CMPR_0000010> ;
+                                                    <http://purl.obolibrary.org/obo/IAO_0000115> "A secure version of FTP that uses SSH to encrypt all data transfers"@en ;
+                                                    oboInOwl:created_by <http://orcid.org/0000-0003-4808-4736> ;
+                                                    oboInOwl:creation_date "2019-10-20T23:00:20Z"^^xsd:dateTime ;
+                                                    oboInOwl:hasExactSynonym "SSH File Transfer Protocol"@en ;
+                                                    rdfs:label "SFTP"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://cor.esipfed.org/ont/earthcube/CMPR_0000007> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "A secure version of FTP that uses SSH to encrypt all data transfers"@en ;
+   <http://purl.obolibrary.org/obo/IAO_0000119> "Christensson, Per. \"FTP Definition.\" TechTerms. (January 30, 2015). Accessed Oct 20, 2019. https://techterms.com/definition/ftp."
+ ] .
+
+
+###  http://cor.esipfed.org/ont/earthcube/CMPR_0000008
+<http://cor.esipfed.org/ont/earthcube/CMPR_0000008> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://cor.esipfed.org/ont/earthcube/CMPR_0000010> ;
+                                                    <http://purl.obolibrary.org/obo/IAO_0000115> "The communications protocol used for sending e-mail over the Internet."@en ;
+                                                    oboInOwl:created_by <http://orcid.org/0000-0003-4808-4736> ;
+                                                    oboInOwl:creation_date "2019-10-20T23:02:24Z"^^xsd:dateTime ;
+                                                    oboInOwl:hasExactSynonym "Simple Mail Transfer Protocol"@en ;
+                                                    rdfs:label "SMTP"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://cor.esipfed.org/ont/earthcube/CMPR_0000008> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "The communications protocol used for sending e-mail over the Internet."@en ;
+   <http://purl.obolibrary.org/obo/IAO_0000119> "Christensson, Per. \"SMTP Definition.\" TechTerms. (2006). Accessed Oct 20, 2019. https://techterms.com/definition/smtp."
+ ] .
+
+
+###  http://cor.esipfed.org/ont/earthcube/CMPR_0000009
+<http://cor.esipfed.org/ont/earthcube/CMPR_0000009> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://cor.esipfed.org/ont/earthcube/CMPR_0000010> ;
+                                                    <http://purl.obolibrary.org/obo/IAO_0000115> "A simple, standardized protocol for delivering e-mail messages."@en ;
+                                                    oboInOwl:created_by <http://orcid.org/0000-0003-4808-4736> ;
+                                                    oboInOwl:creation_date "2019-10-20T23:04:16Z"^^xsd:dateTime ;
+                                                    oboInOwl:hasExactSynonym "POP3"@en ,
+                                                                             "Post Office Protocol"@en ;
+                                                    rdfs:label "POP"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://cor.esipfed.org/ont/earthcube/CMPR_0000009> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "A simple, standardized protocol for delivering e-mail messages."@en ;
+   <http://purl.obolibrary.org/obo/IAO_0000119> "Christensson, Per. \"POP3 Definition.\" TechTerms. (2006). Accessed Oct 20, 2019. https://techterms.com/definition/pop3."
+ ] .
+
+
+###  http://cor.esipfed.org/ont/earthcube/CMPR_0000010
+<http://cor.esipfed.org/ont/earthcube/CMPR_0000010> rdf:type owl:Class ;
+                                                    oboInOwl:created_by <http://orcid.org/0000-0003-4808-4736> ;
+                                                    oboInOwl:creation_date "2019-10-20T23:06:46Z"^^xsd:dateTime ;
+                                                    rdfs:label "Communication Protocols"@en .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi
