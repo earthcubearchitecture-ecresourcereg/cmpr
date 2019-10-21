@@ -9,8 +9,8 @@
 @base <http://cor.esipfed.org/ont/earthcube/CMPR> .
 
 <http://cor.esipfed.org/ont/earthcube/CMPR> rdf:type owl:Ontology ;
-                                             dc:title "Communication Protocols Controlled Vocabulary"@en ,
-                                                      "The Communications Protocols Controlled Vocabulary was created for NSF's EarthCube Program's Resource Repository.  At this point it merely lists the protocols used by these resources, with the eventual goal of enabling the more complete descriptions that would be required to improve interoperability between resources such as data sets and software tools."@en ;
+                                             dc:description "The Communications Protocols Controlled Vocabulary was created for NSF's EarthCube Program's Resource Repository.  At this point it merely lists the protocols used by these resources, with the eventual goal of enabling the more complete descriptions that would be required to improve interoperability between resources such as data sets and software tools."@en ;
+                                             dc:title "Communication Protocols Controlled Vocabulary"@en ;
                                              <http://purl.org/dc/terms/bibliographicCitation> "Duerr, R., 2019, \"Communications Protocols Controlled Vocabulary\", ESIP Community Ontology Repository, Version 1.0.0, available at: http://cor.esipfed.org/ont/earthcube/CMPR"@en ;
                                              <http://purl.org/dc/terms/license> <https://creativecommons.org/share-your-work/public-domain/cc0/> ,
                                                                                 "Ruth Duerr"@en ;
